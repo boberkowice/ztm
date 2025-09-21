@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boberkowice - ZTM/title>
-
-<head>
+    <title>Boberkowice - ZTM</title>
+    <!-- Wczytanie czcionki z CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
-
     <style>
         /* Ogólne ustawienia strony */
         body {
@@ -31,10 +28,10 @@
         /* Pasek nawigacyjny */
         .navbar {
             position: fixed;
-            top: 120px; /* poniżej logo */
+            top: 120px;
             left: 0;
             width: 100%;
-            background-color: #8B4513; /* brązowy */
+            background-color: #8B4513;
             padding: 10px 20px;
             display: flex;
             gap: 30px;
@@ -43,7 +40,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
 
-        /* Linki na pasku */
         .navbar a {
             color: white;
             font-weight: bold;
@@ -54,35 +50,31 @@
             transition: background-color 0.3s;
         }
 
-        /* Efekt hover */
         .navbar a:hover {
-            background-color: #A0522D; /* jaśniejszy brąz */
+            background-color: #A0522D;
         }
 
-        /* Aktywna zakładka */
         .navbar a.active {
             background-color: white;
             color: #8B4513;
         }
 
-        /* Treść strony */
         .content {
-            margin-top: 200px; /* żeby treść nie była pod paskiem */
+            margin-top: 200px;
             padding: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Klikalne logo -->
     <a href="index.html">
         <img id="logo" src="logo.png" alt="Logo">
     </a>
 
-    <!-- Pasek nawigacyjny -->
     <div class="navbar">
         <a href="rozklad.html" class="active">Rozkład Jazdy</a>
         <a href="bilety.html">Bilety</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="o-ztm.html">O ZTM</a>
     </div>
+</body>
 </html>
