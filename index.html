@@ -3,20 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boberkowice - ZTM</title>
+    <title>Strona ZTM</title>
     <style>
         /* Umieszczenie logo w lewym górnym rogu */
         #logo {
-            position: fixed; /* zawsze w tym miejscu podczas scrollowania */
-            top: 10px;       /* odstęp od góry ekranu */
-            left: 10px;      /* odstęp od lewej krawędzi ekranu */
-            width: 200px;    /* szerokość obrazka (dopasuj według potrzeb) */
-            cursor: pointer; /* pokazuje, że to klikalny element */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        /* Pasek nawigacyjny */
+        .navbar {
+            position: fixed;
+            top: 120px; /* poniżej logo */
+            left: 0;
+            width: 100%;
+            background-color: #8B4513; /* brązowy */
+            padding: 10px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* Linki na pasku */
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        /* Efekt hover */
+        .navbar a:hover {
+            background-color: #A0522D; /* jaśniejszy brąz przy najechaniu */
+        }
+
+        /* Aktywna zakładka */
+        .navbar a.active {
+            background-color: white;
+            color: #8B4513;
         }
     </style>
 </head>
 <body>
+    <!-- Klikalne logo -->
     <a href="https://boberkowice.github.io/ztm" target="_blank">
         <img id="logo" src="logo.png" alt="Logo">
     </a>
-</bo
+
+    <!-- Pasek nawigacyjny -->
+    <div class="navbar">
+        <a href="https://boberkowice.github.io/ztm/rozkład" class="active">Rozkład Jazdy</a>
+        <a href="https://boberkowice.github.io/ztm/bilety">Bilety</a>
+        <a href="https://boberkowice.github.io/ztm/kontakt">Kontakt</a>
+        <a href="https://boberkowice.github.io/ztm/o-ztm">O ZTM</a>
+    </div>
+</body>
+</html>
