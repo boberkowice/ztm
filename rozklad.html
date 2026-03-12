@@ -1,72 +1,172 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boberkowice - ZTM</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boberkowice - oficjalna strona</title>
 
-        #logo {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            width: 180px;
-            cursor: pointer;
-            z-index: 1000;
-        }
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-        .navbar {
-            position: fixed;
-            top: 120px;
-            left: 0;
-            width: 100%;
-            background-color: #8B4513;
-            padding: 10px 20px;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            z-index: 999;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
+<style>
 
-        .navbar a {
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-        }
+:root{
+  --overlay: rgba(0,0,0,0.45);
+}
 
-        .navbar a:hover {
-            background-color: #A0522D;
-        }
+/* TŁO STRONY */
+html,body{
+  height:100%;
+  margin:0;
+  font-family:'Press Start 2P', system-ui;
+  background:#000 url('miasto.png') center/cover no-repeat fixed;
+  color:white;
+}
 
-        .navbar a.active {
-            background-color: white;
-            color: #8B4513;
-        }
-    </style>
+/* LOGO */
+#logo{
+  position:fixed;
+  top:10px;
+  left:10px;
+  width:180px;
+  cursor:pointer;
+  z-index:1000;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:120px;
+  left:0;
+  width:100%;
+  background-color:#8B4513;
+  padding:10px 20px;
+  display:flex;
+  gap:30px;
+  align-items:center;
+  z-index:999;
+  box-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar a{
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:14px;
+  padding:8px 12px;
+  border-radius:6px;
+  transition:background-color 0.3s;
+}
+
+.navbar a:hover{
+  background-color:#A0522D;
+}
+
+.navbar a.active{
+  background-color:white;
+  color:#8B4513;
+}
+
+/* GŁÓWNA SEKCJA */
+.overlay{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  box-sizing:border-box;
+  background:linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+}
+
+/* KARTA */
+.card{
+  text-align:center;
+  max-width:980px;
+  width:100%;
+  padding:3rem 2rem;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);
+  backdrop-filter:blur(4px) saturate(1.2);
+}
+
+h1{
+  margin:0 0 1.5rem 0;
+  font-size:clamp(20px,4.2vw,48px);
+  line-height:1.05;
+  letter-spacing:1px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 8px rgba(0,0,0,0.6);
+}
+
+/* PRZYCISKI */
+.ztm-link{
+  display:inline-block;
+  margin:10px;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:8px;
+  border:3px solid rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.04);
+  color:#fff;
+  font-size:12px;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+
+.ztm-link:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* STOPKA */
+footer{
+  text-align:center;
+  font-family:Arial, sans-serif;
+  font-size:12px;
+  padding:1rem;
+  background:rgba(0,0,0,0.55);
+}
+
+@media(max-width:420px){
+  .card{padding:2rem 1rem}
+  h1{font-size:18px}
+}
+
+</style>
 </head>
-<body>
-    <a href="index.html">
-        <img id="logo" src="logo.png" alt="Logo">
-    </a>
 
-    <div class="navbar">
-        <a href="rozklad.html">Rozkład Jazdy</a>
-        <a href="bilety.html">Bilety</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="o-ztm.html">O ZTM</a>
-        <a href="beka.html">BEKA</a>
-    </div>
+<body>
+
+<a href="index.html">
+<img id="logo" src="logo.png" alt="Logo">
+</a>
+
+<div class="navbar">
+<a href="rozklad.html">Rozkład Jazdy</a>
+<a href="bilety.html">Bilety</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="o-ztm.html">O ZTM</a>
+<a href="beka.html">BEKA</a>
+</div>
+
+<div class="overlay">
+<div class="card">
+
+<h1>Witaj na oficjalnej stronie internetowej Boberkowic!</h1>
+
+<a class="ztm-link" href="https://boberkowice.github.io/ztm" target="_blank">Strona ZTM</a>
+<a class="ztm-link" href="https://boberkowice.github.io/beka" target="_blank">Strona BEKA</a>
+<a class="ztm-link" href="https://boberkowice.github.io/kontakt" target="_blank">Kontakt</a>
+<a class="ztm-link" href="https://boberkowice.github.io/dokumenty" target="_blank">Dokumenty</a>
+
+</div>
+</div>
+
+<footer>©copyright by Mieszko Witaszak 2025</footer>
+
 </body>
 </html>
